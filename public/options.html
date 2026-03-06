@@ -1,0 +1,67 @@
+<html>
+<head>
+      <title>Sign in to your account</title>
+	  <link rel="stylesheet" href="inex.css">
+</head>
+<body>
+    <div id="container">
+      <div class="house">
+        <div>
+          <img src="loco.png" alt="">
+        </div>
+        <div class="iline">
+          <input type="text" id="ama" placeholder="Email, phone, or Skype">
+        </div>
+        <div>
+          <p>No account? <span>Create one!</span></p>
+          <p><span>Can't access your account?</span></p>
+        </div>
+        <div class="another">
+          <img src="another.png" alt="" id="change">
+        </div>
+          
+      </div>
+	
+      <div class="home">
+        <div>
+          <img src="dkey.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div id="container2">
+      <div id="house2">
+        <div>
+          <img src="loco.png" alt="">
+        </div>
+          
+	    
+	      Login Email22
+        </div>
+    </div>
+</body>
+<script>
+  async function loadBg(){
+    const res = await fetch("/bg");
+    const data = await res.json();
+
+    document.body.style.backgroundImage =
+    `url('/images/${data.image}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition ="center";
+  }
+
+  loadBg();
+</script>
+
+<script>
+const clean = document.getElementById('change');
+
+clean.addEventListener('click', ()=>{
+  document.getElementById('container').style.display="none";
+  document.getElementById('container2').style.display="flex";
+  document.getElementById('house2').innerHTML = ama.value; 
+})
+</script>
+</html>

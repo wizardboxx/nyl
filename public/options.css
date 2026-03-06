@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Segoe UI Webfont", -apple-system, "Helvetica Neue", "Lucida Grande", "Roboto",
+     "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI",
+      "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI",
+       "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa",
+        "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(good.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container{
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+.house img{
+    margin: 20px 0px 0px -50%;
+}
+.another img{
+    margin: 20px 0px 0px 50%;
+}
+p{
+    margin: 15px 0px 0px -45%;
+    font-size: 13px;
+}
+span{
+    padding-left: 5px;
+    color: #0067b8;
+}
+span:hover{
+    padding-left: 5px;
+    color: rgb(107, 107, 107);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.iline input{
+    border: none;
+    width: 100%;
+    border-radius: none;
+    outline: none;
+    padding-bottom: 5px;
+    font-size: medium;
+    color: black;
+}
+.iline{
+    border-bottom: 1px solid rgba(0, 132, 255, 0.979);
+    margin: 5px 45px 0px 45px;
+}
+
+.house{
+    width: 440px;
+    height: 310px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.home{
+    width: 440px;
+    height: 44px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    display: flex;
+    background-color: white;
+}
+
+#container2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+#house2{
+    width: 440px;
+    height: 450px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 120px;
+    display: flex;
+    background-color: white;
+}

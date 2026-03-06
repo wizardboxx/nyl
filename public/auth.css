@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    cursor: pointer;
+    padding: 0px;
+    font-family: "Segoe UI Webfont", -apple-system, "Helvetica Neue", "Lucida Grande", "Roboto",
+     "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI",
+      "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI",
+       "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa",
+        "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(/images/clean.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+#house{
+    width: 470px;
+    height: 430px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 120px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#house img{
+    margin: 20px 0px 0px -50%;
+}
+#userr{
+    margin: 10px 0px 10px -50%;
+}
+#enterr{
+    margin: 10px 0px 20px -50%;
+}
+#iput{
+    border-bottom: 2px solid rgba(0, 132, 255, 0.979);
+    margin: 15px 45px 20px 45px;
+}
+#iput input{
+    border: none;
+    width: 100%;
+    border-radius: none;
+    outline: none;
+    padding-bottom: 5px;
+    font-size: medium;
+    color: black;
+}
+#sxin{
+   margin-left: 70%; 
+   margin-top: 25px;
+}
+.plat{
+   align-self: flex-start;
+   display: flex;
+   flex-direction: row;
+   font-weight: 600;
+   padding-left: 43px;
+}
+
+span{
+    padding-right: 55%;
+    color: #0067b8;
+}
+
+
+
+#container2{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+#container3{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+#container4{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+#container5{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+
+#house2{
+    width: 500px;
+    height: 500px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 70px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#house2 img{
+    margin: 20px 0px 0px -50%;
+}
+#userr2{
+    margin: 10px 0px 10px -50%;
+}
+#enterr2{
+    margin: 10px 0px 20px -25%;
+}
+#iput2{
+    margin: 15px 45px 20px 45px;
+}
+#iput2 h1{
+    width: 100%;
+    padding-bottom: 5px;
+    font-weight: 500;
+    font-size: 60px;
+}
+#sxin{
+   margin-left: 70%; 
+   margin-top: 25px;
+}
+.plat{
+   align-self: flex-start;
+   display: flex;
+   flex-direction: row;
+   font-weight: 530;
+   padding-left: 43px;
+}
+#platt{
+   align-self: flex-start;
+   display: flex;
+   flex-direction: row;
+   font-weight: 530;
+   padding-left: 4px;
+   margin: 15px 80px 20px 40px;
+   color: rgba(0, 132, 255, 0.979);
+   border-bottom: 2px solid rgba(0, 132, 255, 0.979);
+}
+
+span{
+    padding-right: 55%;
+    color: #0067b8;
+}

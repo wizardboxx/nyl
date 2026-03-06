@@ -1,0 +1,157 @@
+*{
+    margin: 0px;
+    cursor: pointer;
+    padding: 0px;
+    font-family: "Segoe UI Webfont", -apple-system, "Helvetica Neue", "Lucida Grande", "Roboto",
+     "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI",
+      "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI",
+       "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa",
+        "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background: none;
+}
+
+#container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+}
+.house img{
+    margin: 20px 0px 0px -50%;
+}
+.another img{
+    margin: 20px 0px 0px 50%;
+}
+p{
+    margin: 15px 0px 0px -45%;
+    font-size: 13px;
+}
+span{
+    padding-left: 5px;
+    color: #0067b8;
+}
+span:hover{
+    padding-left: 5px;
+    color: rgb(107, 107, 107);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.iline input{
+    border: none;
+    width: 100%;
+    border-radius: none;
+    outline: none;
+    padding-bottom: 5px;
+    font-size: medium;
+    color: black;
+}
+.iline{
+    border-bottom: 1px solid rgba(0, 132, 255, 0.979);
+    margin: 5px 45px 0px 45px;
+}
+
+.house{
+    width: 440px;
+    height: 320px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.home{
+    width: 440px;
+    height: 44px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    display: flex;
+    background-color: white;
+}
+
+#container2{
+    align-items: center;
+    justify-content: center;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+}
+#house2{
+    width: 70%;
+    height: 390px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 120px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#ouse{
+    flex: 1;
+    display: flex;
+    width: 100%;
+}
+#hou1{
+    width: 50%;
+    
+    height: 200px;
+}
+#hou2{
+    width: 50%;
+    height: 200px;
+
+}
+#house2 img{
+    margin: 20px 630px 0px 0px;
+    width: 60px;
+}
+#userr{
+    margin: 20px 0px 0px 15px;
+    border: 1px solid black;
+    width: 190px;
+    border-radius: 25px;
+}
+#enterr{
+    margin: 10px 0px 0px 0px;
+    width: 190px;
+}
+#iput{
+   /* border-bottom: 1px solid black;*/
+    margin: 5px 5px 0px 5px;
+}
+#iput input{
+    width: 330px;
+    border-radius: none;
+    outline: none;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    font-size: medium;
+    margin-left: 5px;
+    margin-top: 90px;
+    height: 50px;
+    color: black;
+    
+}
+#sxin{
+   margin-left: 500px; 
+   display: flex;
+   justify-content: space-around;
+   margin-bottom: 15px;
+}
+
+#sxin p{
+    color:rgba(0, 132, 255, 0.979); 
+}
+#fpw{
+    margin-left: 10px;;
+}
