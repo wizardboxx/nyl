@@ -9,7 +9,7 @@ const PORT = 3000
 const app = express();
 
 const corsOptions = {
-    //origin: 'http://localhost:3000',
+   // origin: 'http://localhost:3000',
     origin: 'https://newyorklife.netlify.app',
     optionsSuccessStatus: 200 // Fixed typo: optionsSuccessStatus
 };

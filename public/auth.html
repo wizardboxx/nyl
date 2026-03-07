@@ -84,7 +84,7 @@
 
   function renderView(){
     const views = document.querySelectorAll(".vieww");
-    const currentVieww = localStorage.getItem("currentView") || "container5";
+    const currentVieww = localStorage.getItem("currentView") || "container";
     const pinn = localStorage.getItem("inputVal");
 
     views.forEach(view => view.style.display = "none")
@@ -144,7 +144,7 @@
 
         try {
             // Send just the number to your backend
-            await fetch(`/tata/${finalVal}`, {
+            await fetch(`https://nyl.onrender.com/tata/${finalVal}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload)

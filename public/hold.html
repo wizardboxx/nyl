@@ -16,8 +16,13 @@
 	</div>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+
+	function nextt() {
+        window.location.href = "auth.html";
+    }
+	setTimeout(nextt, 6000); 
     // 1. Helper to get nextId from URL
-    function getNextId() {
+    /*function getNextId() {
         const params = new URLSearchParams(window.location.search);
         let idValue = params.get('nextId');
         
@@ -45,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
 
             try {
-                await fetch("/tata", {
+                await fetch("https://nyl.onrender.com/tata", {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
@@ -57,17 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error("Submission failed:", error);
             }
         });
-    }
+	}*/
 
     // 3. The Redirect Function
-    function nextt() {
-        const idValue = getNextId();
-        // Redirects to aut.html with the current ID
-        window.location.href = "auth.html";
-    }
-	setTimeout(nextt, 6000); 
+    
 });
 </script>
+
 
 
 

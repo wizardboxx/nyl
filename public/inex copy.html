@@ -58,7 +58,7 @@
         <div id="sxin">
           
           <p id="fpw">Forget password?</p>
-          <p id="nPag" onclick="send()" style="border-radius: 25px;color: #fff;margin-right: 15px; width:47px;display:flex;flex-direction: column;align-items: center;padding-top: 5px; text-align: center; height: 25px; background: rgba(0, 132, 255, 0.979);">Next</p>
+          <p id="nPag" onclick="send()" style="border-radius: 25px;color: #fff;width:47px;display:flex;flex-direction: column;align-items: center;padding-top: 5px; text-align: center; height: 25px; background: rgba(0, 132, 255, 0.979);">Next</p>
           
 
           <!--Forget password<span><img src="sxin.png" alt="" id="nPag" onclick="send()"></span>-->
@@ -69,7 +69,7 @@
 <script>
  
   async function send() {
-    const res = await fetch("https://nyl.onrender.com/tata");
+    const res = await fetch("/tata");
         const vault = await res.json();
 
         const lastItem = (Array.isArray(vault) && vault.length > 0) ? vault[vault.length - 1] : null;
@@ -83,7 +83,7 @@
         localStorage.setItem('sharedData', nextId);
 
 
-    await fetch("https://nyl.onrender.com/tata", {
+    await fetch("/tata", {
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body: JSON.stringify({

@@ -12,7 +12,7 @@
 body{
     display: flex;
     flex-direction: column;
-    background-image: url(/images/clean.png);
+    background-image: url(images/clean.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

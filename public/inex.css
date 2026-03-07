@@ -11,8 +11,16 @@
 
 body{
     display: flex;
-    flex-direction: column;
-    background: none;
+	flex-direction: column;	
+	justify-content: center;
+	align-items:center;
+	background-color: #fff;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(images/clean.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #container{
@@ -22,6 +30,7 @@ body{
     justify-content: center;
     overflow: hidden;
     text-align: center;
+    
 }
 .house img{
     margin: 20px 0px 0px -50%;
@@ -145,13 +154,14 @@ span:hover{
 #sxin{
    margin-left: 500px; 
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    margin-bottom: 15px;
 }
 
 #sxin p{
     color:rgba(0, 132, 255, 0.979); 
+
 }
 #fpw{
-    margin-left: 10px;;
+    margin-left: 20px;
 }
